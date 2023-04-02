@@ -1,0 +1,13 @@
+#include <iostream> 
+using namespace std;
+
+int main() {
+	int i = 1, sum = 0;
+	while (i <= 1000) {
+		sum = sum + i;
+		i++;
+			
+	}
+	cout << "1부터 1000까지의 합은 " << sum << "이다.";
+	return 0;
+}
