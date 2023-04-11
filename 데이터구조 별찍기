@@ -1,15 +1,20 @@
 print('BACKJOON Online Judge')
-print('문제 번호 : 1000')
-print('두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.')
-print('조건 : A > 0, B < 10')
-print('A와 B를 차례로 입력하시오.')
-while True:
-    a, b = map(int, input().split())
-    if a <= 0:
-        print('A는 0보더 커야합니다! \n다시 입력하세요!')
-    elif b >= 10:
-        print('B는 10보다 작아야합니다! \n다시 입력하세요!')
-    else:
-        print('입력한 A와 B에 대한 A+B의 값')
-        print(a+b)
-        break
+print('문제 번호 : 2447')
+def get_stars(n):
+    matrix = [] 
+    for i in range(len(n) * 3):
+        if i // len(n) == 1: 
+            matrix.append(n[i % len(n)] + " " * len(n) + n[i % len(n)])
+        else:
+            matrix.append(n[i % len(n)] * 3) 
+    return matrix 
+resultStar = ["***", "* *", "***"]
+n = int(input())
+count = 0 
+while n != 3:
+    n //= 3 
+    count += 1
+for _ in range(count): 
+    resultStar = get_stars(resultStar) 
+for j in resultStar: 
+    print(j)
