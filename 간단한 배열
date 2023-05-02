@@ -1,0 +1,15 @@
+#include <iostream>
+#include <algorithm>
+
+int main() {
+    int arr[] = { 5, 2, 4, 1, 3 }; // 정렬할 배열
+    int n = sizeof(arr) / sizeof(arr[0]); // 배열의 크기
+
+    std::sort(arr, arr + n); // 배열을 오름차순으로 정렬
+
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << " "; // 정렬된 배열 출력
+    }
+
+    return 0;
+}
